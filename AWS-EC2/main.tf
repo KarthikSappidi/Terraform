@@ -50,17 +50,17 @@ resource "aws_security_group" "security-group" {
     }
 }
 
-resource "aws_instance" "zomato" {
-    ami = "ami-007020fd9c84e18c7"
-    instance_type = "t2.medium"
-    key_name = "888888"
-    security_groups = [aws_security_group.security-group.id]
-    user_data = templatefile("./userdata.sh", {})
+resource "aws_instance" "web" {
+  ami                    = "ami-007020fd9c84e18c7"
+  instance_type          = "t2.medium"
+  key_name               = "******"
+  vpc_security_group_ids = [aws_security_group.security-group.id]
+  user_data              = templatefile("./userdata.sh", {})
 
-    tags = {
-      Name = "zomato"
-    }
-    root_block_device {
-      volume_size = 30
-    }
+  tags = {
+    Name = "zomato"
+  }
+  root_block_device {
+    volume_size = 30
+  }
 }
