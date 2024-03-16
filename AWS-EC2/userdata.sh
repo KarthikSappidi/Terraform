@@ -4,12 +4,13 @@
 sudo apt update -y
 
 # Install Jenkins
+sudo apt install fontconfig openjdk-17-jre
 java -version
 openjdk version "17.0.8" 2023-07-18
 OpenJDK Runtime Environment (build 17.0.8+7-Debian-1deb12u1)
 OpenJDK 64-Bit Server VM (build 17.0.8+7-Debian-1deb12u1, mixed mode, sharing)
 
-# Jenkins
+#jenkins
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
 https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
 echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
@@ -20,8 +21,8 @@ sudo apt-get install jenkins
 sudo systemctl start jenkins
 sudo systemctl enable jenkins
 
+
 # Install Docker
-sudo apt-get update -y
 sudo apt-get install docker.io -y
 sudo usermod -aG docker ubuntu  
 newgrp docker
