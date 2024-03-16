@@ -4,7 +4,6 @@
 sudo apt update -y
 
 # Install Jenkins
-sudo apt update
 sudo apt install fontconfig openjdk-17-jre
 java -version
 openjdk version "17.0.8" 2023-07-18
@@ -24,7 +23,6 @@ sudo systemctl enable jenkins
 
 
 # Install Docker
-sudo apt-get update -y
 sudo apt-get install docker.io -y
 sudo usermod -aG docker ubuntu  
 newgrp docker
