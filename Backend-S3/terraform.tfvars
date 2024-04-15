@@ -1,0 +1,5 @@
+aws_s3_bucket=sappidibucket
+aws_dynamodb_table=mydblock
+ami=ami-007020fd9c84e18c7
+instance_type=t2.micro
+subnet_id=subnet-052cbf3a2ff6ce075
