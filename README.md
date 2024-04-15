@@ -7,3 +7,7 @@
 - Initialize Terraform: terraform init.
 - Review and apply the changes: terraform plan and terraform apply.
 - Access your EC2 instance via its public IP or DNS.
+
+## Notes
+- Ensure that you have valid AWS credentials configured locally (e.g., aws configure)
+- Remember to manage your Terraform state securely, either remotely or locally.
